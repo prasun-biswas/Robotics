@@ -1,0 +1,45 @@
+function [node_finder_flag] = find_next_node( st_node, end_node, node_map, initial_node_connected )
+    node_finder_flag = 0;
+    present_connection = zeros(1,100);
+    temp_connections = initial_node_connected;
+%     successors = find_successor(st_node, node_map);
+    successors = node_map(node_map(:,1) == st_node,2);
+    successor_visited = intersect(initial_node_connected, successors);
+    successors = setxor(successors, successor_visited);
+    global dead_nodes;
+    successor_in_dead_node = intersect(dead_nodes, successors);
+    successors = setxor(successors, successor_in_dead_node);
+    disp('start node')
+    disp(st_node)
+    disp('successors')
+    disp(successors)
+    if(st_node == end_node)
+        disp('in goal');
+        global final_node_connection;
+        present_connection(1,1:length(temp_connections)) = temp_connections;
+        final_node_connection = [final_node_connection; present_connection];
+        disp(final_node_connection)     
+        node_finder_flag = 1;
+    elseif ~isempty(successors)
+        for succ = 1:size(successors,1)
+            disp('succ');
+            disp(succ)
+            temp_connections = [initial_node_connected,successors(succ)];          
+            disp('befortemp');
+            disp(temp_connections)
+            path_found = find_next_node(successors(succ), end_node, node_map, temp_connections);
+            if(path_found)
+                break
+            end
+            disp('aftertemp');
+            disp(temp_connections)
+        end 
+        if succ == size(successors,1) && ~path_found
+            dead_nodes = [dead_nodes, successors(succ)];
+        end
+    elseif isempty(successors)
+        dead_nodes = [dead_nodes,]
+    end
+    end
+end
+
