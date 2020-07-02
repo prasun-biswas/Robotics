@@ -19,6 +19,10 @@ other groupmate: Amir sefat and Palash halder
 
 This course emphasizes on integration of various device with ROS. We used Murata IMU sensor, Leddar(x16) sensor and Microsoft Kinect to connect with ROS and store data in different format and analyzed different capabilities of those devises. The experiment includes oritentation analysis, mapping with, blob/face detection, visualization in RViz, saving data as pointcloud etc. 
 
+The following figure shows a typical process we used for sensor integration
+<image src = "img/ROSLedder.PNG" alt = "lego robot" width = 520>
+
+Following figures show several experimentation with the sensor outputs.
 <table>
   <tr>
      <td>Sensor integration</td>
