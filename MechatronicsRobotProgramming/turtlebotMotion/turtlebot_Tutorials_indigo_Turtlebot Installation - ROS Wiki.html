@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0071)http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">
+<link rel="shortcut icon" href="http://wiki.ros.org/custom/favicon.ico" type="image/ico">
+<link rel="stylesheet" href="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/bootstrap.min.css">
+<script type="text/javascript" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/4c8610d177"></script><script src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/nr-1118.min.js.download"></script><script type="text/javascript" async="" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/ga.js.download"></script><script src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/jquery-1.11.0.min.js.download"></script>
+<script src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/sorttable.js.download"></script>
+<script type="text/javascript" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/jquery.min.js.download"></script>                         
+<script type="text/javascript" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/seesaw.js.download"></script> 
+<script type="text/javascript" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/rosversion.js.download"></script> 
+<!--script type="text/javascript" src="/custom/libraries/RGraph.common.core.js" ></script Used for metrics only, should be conditional, not at the top-->
+<!--script type="text/javascript" src="/custom/libraries/RGraph.bar.js" ></script same as above -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_setDomainName', 'wiki.ros.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"4c8610d177","agent":"","transactionName":"NFZaMEVUV0ZVBkBeCQ0cbRZeGk1ARhFYUgQMRxdO","applicationID":"3371695","errorBeacon":"bam.nr-data.net","applicationTime":236}</script>
+<meta name="robots" content="index,nofollow">
+
+<title>turtlebot/Tutorials/indigo/Turtlebot Installation - ROS Wiki</title>
+<script type="text/javascript" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/common.js.download"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+<link rel="canonical" href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation">
+
+<link rel="Start" href="http://wiki.ros.org/Documentation">
+<link rel="Alternate" title="Wiki Markup" href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation?action=print">
+<link rel="Up" href="http://wiki.ros.org/turtlebot/Tutorials/indigo">
+<link rel="Search" href="http://wiki.ros.org/FindPage">
+<link rel="Index" href="http://wiki.ros.org/TitleIndex">
+<link rel="Glossary" href="http://wiki.ros.org/WordIndex">
+<link rel="Help" href="http://wiki.ros.org/HelpOnFormatting">
+</head>
+
+<body lang="en" dir="ltr">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/ga.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+if(f) f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+if(e) {
+  searchChange(e);
+  searchBlur(e);
+}
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+
+<!-- Alert box -->
+<!-- To enable/disable the alert box, uncomment/comment the block below and update the content below the button. -->
+<!--
+    <div class="alert alert-info alert-dismissable" style="text-align: center;">
+<script>
+jQuery(function( $ ){
+    alert_box_name = 'roswiki_roscon'
+    state = localStorage.getItem(alert_box_name);
+    if (!state) {
+      localStorage.setItem(alert_box_name, 'open');
+    }
+    state = localStorage.getItem(alert_box_name);
+    if (state == 'closed') {
+        $( '#topnav .alert' ).hide();
+    }
+    $( '.close' ).click(function () {
+	console.log('in .close.click');
+        localStorage.setItem(alert_box_name, 'closed');
+        $( '#topnav .alert' ).hide();
+  });
+});
+</script>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <a href="http://roscon.ros.org">ROSCon 2017</a> will be in Vancouver, September 21-22! <br>
+      The last few years have sold out: register now and take advantage of discounted hotel rates</a>.
+    </div>
+-->
+<!-- End Alert box -->
+
+      <table id="topnav-table">
+        <tbody><tr>
+          <td width="300" valign="top"><a href="http://wiki.ros.org/"><img border="0" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/ros_org.png" alt="ros.org" width="238" height="51"></a></td>
+          <td width="500" valign="middle">
+            <a href="http://www.ros.org/about-ros">About</a>
+            |
+            <a href="http://wiki.ros.org/Support">Support</a>
+            |
+            <a href="http://discourse.ros.org/">Discussion Forum</a>
+            |
+            <a href="http://status.ros.org/">Service Status</a>
+            |
+            <a href="http://answers.ros.org/">Q&amp;A answers.ros.org</a>
+
+<!--<a href="http://roscon.ros.org/2016/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.jpg" width="133" height="65" alt="ROSCon 2016" /></a>
+-->
+
+<!-- <a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/ros_kong_2014_badge.png" width="133" height="38" alt="roskong" /></a>
+-->
+<!--a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://imgur.com/eMzUJVe.png" width="133" height="38" alt="roskong" /></a-->
+          </td>
+
+          <td valign="middle" align="right">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="https://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input type="hidden" name="cx" value="005596761048178735851:_ejygd2ukbe">
+    <input type="hidden" name="cof" value="FORID:11;NB:1">
+    <input type="hidden" name="filter" value="0">
+    <input type="hidden" name="num" value="10">
+
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="input" id="input" autocomplete="on" style="width: 35%">
+    <input type="hidden" name="q" value="">
+    <input type="submit" name="sa" value="Submit" onclick="Searchy(this)">
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" height="53" width="1024"><nobr><img src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/menu_left.png" width="17" height="53" alt=""><a href="http://wiki.ros.org/"><img border="0" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/menu_documentation.png" width="237" height="53" alt="Documentation"></a><img src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/menu_spacer.png" width="69" height="53"><a href="https://index.ros.org/packages"><img border="0" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/menu_browse_software.png" width="268" height="53" alt="Browse Software"></a><img src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/news"><img border="0" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/menu_news.png" width="84" height="53" alt="News"></a><img src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://wiki.ros.org/ROS/Installation"><img border="0" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/menu_download.png" width="151" height="53" alt="Download"></a><img src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/menu_right.png" width="60" height="53"></nobr></td>
+
+      </tr>
+    </tbody></table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a href="http://wiki.ros.org/turtlebot">turtlebot</a></li><li><a href="http://wiki.ros.org/turtlebot/Tutorials">Tutorials</a></li><li><a href="http://wiki.ros.org/turtlebot/Tutorials/indigo">indigo</a></li><li><a class="backlink" href="http://wiki.ros.org/action/fullsearch/turtlebot/Tutorials/indigo/Turtlebot%20Installation?action=fullsearch&amp;context=180&amp;value=linkto%3A%22turtlebot%2FTutorials%2Findigo%2FTurtlebot+Installation%22" rel="nofollow" title="Click to do a full-text search for this title">Turtlebot Installation</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="http://wiki.ros.org/Distributions">Distributions</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Installation">ROS/Installation</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Tutorials">ROS/Tutorials</a></li><li class="wikilink"><a href="http://wiki.ros.org/RecentChanges">RecentChanges</a></li><li class="current"><a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation">Turtlebot Installation</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#" class="nbcomment" onclick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="http://wiki.ros.org/action/info/turtlebot/Tutorials/indigo/Turtlebot%20Installation?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="http://wiki.ros.org/action/AttachFile/turtlebot/Tutorials/indigo/Turtlebot%20Installation?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation">
+<div>
+    
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show">More Actions:</option><option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled="" class="disabled">Delete Cache</option>
+<option value="show" disabled="" class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled="" class="disabled">------------------------</option>
+<option value="RenamePage" disabled="" class="disabled">Rename Page</option>
+<option value="CopyPage">Copy Page</option>
+<option value="DeletePage" disabled="" class="disabled">Delete Page</option>
+<option value="show" disabled="" class="disabled">------------------------</option>
+<option value="MyPages">My Pages</option>
+<option value="show" disabled="" class="disabled">Subscribe User</option>
+<option value="show" disabled="" class="disabled">------------------------</option>
+<option value="show" disabled="" class="disabled">Remove Spam</option>
+<option value="show" disabled="" class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled="" class="disabled">------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Load</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="http://wiki.ros.org/action/login/turtlebot/Tutorials/indigo/Turtlebot%20Installation?action=login" id="login" rel="nofollow">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" lang="en" dir="ltr">
+
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line867"><span class="anchor" id="line-1-1"></span><span class="anchor" id="line-2-1"></span></p><div><table><tbody><tr>  <td style="background-color: #cce0ff"><strong>Note:</strong> This tutorial assumes that you have completed the previous tutorials:   <a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Interacting%20with%20your%20Turtlebot">Interacting with your Turtlebot</a>. </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-3-1"></span><span class="anchor" id="line-4-1"></span><span class="anchor" id="line-5-1"></span><span class="anchor" id="line-6-1"></span><div><table><tbody><tr>  <td style="background-color: #bbceee"> <img alt="(!)" height="15" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/idea.png" title="(!)" width="15"> Please ask about problems and questions regarding this tutorial on <a class="http" href="http://answers.ros.org/">answers.ros.org</a>. Don't forget to include in your question the link to this page, the versions of your OS &amp; ROS, and also add appropriate tags.</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-7-1"></span><span class="anchor" id="line-8-1"></span><span class="anchor" id="line-9-1"></span>
+<h1 id="Turtlebot_Installation">Turtlebot Installation</h1>
+<span class="anchor" id="line-10-1"></span><strong>Description:</strong> Installing software onto the turtlebot.<br>
+<br>
+ <span class="anchor" id="line-11-1"></span><span class="anchor" id="line-12-1"></span><span class="anchor" id="line-13-1"></span><strong>Keywords:</strong> turtlebot installation<br>
+<br>
+ <span class="anchor" id="line-14-1"></span><span class="anchor" id="line-15-1"></span><span class="anchor" id="line-16-1"></span><strong>Tutorial Level:</strong> BEGINNER<br>
+ <br>
+ <span class="anchor" id="line-17-1"></span><span class="anchor" id="line-18-1"></span><strong>Next Tutorial:</strong>   <a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/PC%20Installation">PC Installation</a> <br>
+ <br>
+  <span class="anchor" id="line-19-1"></span><p class="line874"> <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span></p><p class="line867"></p><div class="table-of-contents"><p class="table-of-contents-heading">Contents</p><ol><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#Installation_Types">Installation Types</a><ol><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.ISO_Installation">ISO Installation</a><ol><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.Download_ISO_.26_Create_Startup_USB">Download ISO &amp; Create Startup USB</a></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.Install_Ubuntu_with_TurtleBot_ISO">Install Ubuntu with TurtleBot ISO</a></li></ol></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.Debs_Installation">Debs Installation</a><ol><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.Ubuntu_Repo_Setup">Ubuntu Repo Setup</a></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.Ubuntu_Package_Install">Ubuntu Package Install</a></li></ol></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.Source_Installation">Source Installation</a><ol><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.Preparation">Preparation</a></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.Workspaces">Workspaces</a></li></ol></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#Troubleshooting">Troubleshooting</a></li></ol></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#Post_Installation">Post Installation</a><ol><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#Environment_variables">Environment variables</a></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#Base-Specific_Instructions">Base-Specific Instructions</a></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#Alternative_Hardware_Options">Alternative Hardware Options</a></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#Conveniences">Conveniences</a></li></ol></li><li>
+<a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation#What_Next.3F">What Next?</a></li></ol></div><p class="line874"> <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span></p><p class="line867">
+</p><h2 id="Installation_Types">Installation Types</h2>
+<span class="anchor" id="line-29"></span><p class="line874">The indigo turtlebot software is designed to run on a notebook running a Trusty version of Ubuntu. This is not a strict requirement - it will also be perfectly happy sitting on certain embedded boards, or source installed on top of another linux distribution but of course. If you wish to be more adventurous in this way, good luck! <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span></p><p class="line867"></p><div dir="ltr" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.content" lang="en"><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.top"></span>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-1"></span><p class="line867">
+</p><h3 id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.ISO_Installation">ISO Installation</h3>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-2"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-3"></span><p class="line874">This instruction is for users with a netbook with no operating system. <span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-4"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-5"></span></p><p class="line867">
+</p><h4 id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.Download_ISO_.26_Create_Startup_USB">Download ISO &amp; Create Startup USB</h4>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-6"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-7"></span><p class="line862">Download TurtleBot ISO with the following link and create startup USB disk using <a class="https" href="https://en.wikipedia.org/wiki/Startup_Disk_Creator">Startup Disk Creator</a> or similar tools. <span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-8"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-9"></span></p><ul><li><p class="line891"><a class="http" href="http://download.ros.org/downloads/turtlebot/ubuntu-14.04.2-desktop-amd64-turtlebot-RC0.iso">ubuntu-14.04.2-desktop-amd64-turtlebot-RC0.iso</a>, <a class="http" href="http://download.ros.org/downloads/turtlebot/ubuntu-14.04.2-desktop-amd64-turtlebot-RC0.sha512sum">sha512sum</a> <span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-10"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-11"></span></p></li></ul><p class="line867">
+</p><h4 id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.Install_Ubuntu_with_TurtleBot_ISO">Install Ubuntu with TurtleBot ISO</h4>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-12"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-13"></span><p class="line874">Boot from turtlebot ISO usb and follow normal ubuntu installer guide. This will also install turtlebot packages with fancy turtlebot background image. <span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-14"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-15"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.line-16"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-ISO_Installation.bottom"></span></p></div> <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><p class="line867"></p><div dir="ltr" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.content" lang="en"><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.top"></span>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-1"></span><p class="line867">
+</p><h3 id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.Debs_Installation">Debs Installation</h3>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-2"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-3"></span><p class="line874">These instructions are intended for users with a netbook pre-installed with Ubuntu Trusty.  <span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-4"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-5"></span></p><p class="line867">
+</p><h4 id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.Ubuntu_Repo_Setup">Ubuntu Repo Setup</h4>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-6"></span><p class="line862">Follow the generic Ubuntu instructions for a <a href="http://wiki.ros.org/indigo/Installation/Ubuntu">ros-indigo-desktop-full installation</a>.  <span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-7"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-8"></span></p><p class="line867">
+</p><h4 id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.Ubuntu_Package_Install">Ubuntu Package Install</h4>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-9"></span><p class="line862">In addition, you will need to install the following debs for <a href="http://wiki.ros.org/TurtleBot">TurtleBot</a> (please update this if you find any errors): <span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-10"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-11"></span></p><p class="line867"><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-12"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-13"></span></p><pre><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-1-1"></span>&gt; sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo-turtlebot-interactions ros-indigo-turtlebot-simulator ros-indigo-kobuki-ftdi ros-indigo-rocon-remocon ros-indigo-rocon-qt-library ros-indigo-ar-track-alvar-msgs</pre><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.line-14"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Debs_Installation.bottom"></span></div> <span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><p class="line867"></p><div dir="ltr" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.content" lang="en"><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.top"></span>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-1"></span><p class="line867">
+</p><h3 id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.Source_Installation">Source Installation</h3>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-2"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-3"></span><p class="line862">This is for people who'd like to hack on the turtlebot sources and contribute. For more information, please ask us for more information at <tt>&lt;ros-sig-turtlebot&nbsp;AT&nbsp;googlegroups&nbsp;DOT&nbsp;com&gt;</tt>. <span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-4"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-5"></span></p><p class="line867">
+</p><h4 id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.Preparation">Preparation</h4>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-6"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-7"></span><p class="line867"><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-8"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-9"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-10"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-11"></span></p><pre><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-1-1"></span>&gt; sudo apt-get install python-rosdep python-wstool ros-indigo-ros
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-2-1"></span>&gt; sudo rosdep init
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-3-1"></span>&gt; rosdep update</pre><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-12"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-13"></span><p class="line867">
+</p><h4 id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.Workspaces">Workspaces</h4>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-14"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-15"></span><p class="line874">We are using chained workspaces here, but you could just as simply merge them into one. <span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-16"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-17"></span></p><p class="line867"><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-18"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-19"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-20"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-21"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-22"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-23"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-24"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-25"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-26"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-27"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-28"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-29"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-30"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-31"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-32"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-33"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-34"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-35"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-36"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-37"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-38"></span></p><pre><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-1-2"></span>&gt; mkdir ~/rocon
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-2-2"></span>&gt; cd ~/rocon
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-3-2"></span>&gt; wstool init -j5 src https://raw.github.com/robotics-in-concert/rocon/release/indigo/rocon.rosinstall
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-4-1"></span>&gt; source /opt/ros/indigo/setup.bash
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-5-1"></span>&gt; rosdep install --from-paths src -i -y
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-6-1"></span>&gt; catkin_make
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-7-1"></span>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-8-1"></span>&gt; mkdir ~/kobuki
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-9-1"></span>&gt; cd ~/kobuki
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-10-1"></span>&gt; wstool init src -j5 https://raw.github.com/yujinrobot/yujin_tools/master/rosinstalls/indigo/kobuki.rosinstall
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-11-1"></span>&gt; source ~/rocon/devel/setup.bash
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-12-1"></span>&gt; rosdep install --from-paths src -i -y
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-13-1"></span>&gt; catkin_make
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-14-1"></span>
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-15-1"></span>&gt; mkdir ~/turtlebot
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-16-1"></span>&gt; cd ~/turtlebot
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-17-1"></span>&gt; wstool init src -j5 https://raw.github.com/yujinrobot/yujin_tools/master/rosinstalls/indigo/turtlebot.rosinstall
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-18-1"></span>&gt; source ~/kobuki/devel/setup.bash
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-19-1"></span>&gt; rosdep install --from-paths src -i -y
+<span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-20-1"></span>&gt; catkin_make</pre><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.line-39"></span><span class="anchor" id="turtlebot.2BAC8-Tutorials.2BAC8-indigo.2BAC8-Source_Installation.bottom"></span></div> <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line867">
+</p><h3 id="Troubleshooting">Troubleshooting</h3>
+<span class="anchor" id="line-38"></span><p class="line862">If you are having conflict issues with openni sensor debs, please read this <a class="https" href="https://github.com/turtlebot/turtlebot/issues/139">issue</a> to find a workaround. <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span></p><p class="line874">If the rosdep install step for ~/turtlebot fails saying it's unable to find create_dashboard and create_gazebo_plugins, make sure you use '-r' with the rosdep install command and that will continue despite not being able to find either create_dashboard or create_gazebo_plugins. <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span></p><p class="line867">
+</p><h2 id="Post_Installation">Post Installation</h2>
+<span class="anchor" id="line-43"></span><p class="line867">
+</p><h3 id="Environment_variables">Environment variables</h3>
+<span class="anchor" id="line-44"></span><p class="line874">For Turtlebot packages some environment variables are used that are set by environment hook. Most easily, it's automatically run when you open a new terminal. <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span></p><p class="line867">
+</p><h3 id="Base-Specific_Instructions">Base-Specific Instructions</h3>
+<span class="anchor" id="line-47"></span><ul><li><p class="line891"><a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Kobuki%20Base">Kobuki Base</a> - instructions for transferring a udev rule to conveniently work with the Kobuki. <span class="anchor" id="line-48"></span></p></li><li><p class="line891"><a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Create%20Base">Create Base</a> - instructions for modifying the turtlebot software to work with the Create. <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span></p></li></ul><p class="line867">
+</p><h3 id="Alternative_Hardware_Options">Alternative Hardware Options</h3>
+<span class="anchor" id="line-51"></span><ul><li><p class="line891"><a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Alternative%203D%20Sensor%20Setup">Alternative 3D Sensor Setup</a> - instructions for modifying the turtlebot software to work with the Kinect, Astra, or Realsense 3D sensors. <span class="anchor" id="line-52"></span></p></li><li><p class="line891"><a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Netbook%20Battery%20Setup">Netbook Battery Setup</a> - if the turtlebot software isn't correctly finding your battery. <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span></p></li></ul><p class="line867">
+</p><h3 id="Conveniences">Conveniences</h3>
+<span class="anchor" id="line-55"></span><p class="line862">For convenience, you may wish to source your <tt class="backtick">setup.sh</tt> script from your <tt class="backtick">.bashrc</tt> so that your environment is ready as soon as you log in. e.g. <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span></p><p class="line867"><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span></p><pre><span class="anchor" id="line-1-2"></span># For a deb installation
+<span class="anchor" id="line-2-2"></span>&gt; echo "source /opt/ros/indigo/setup.bash" &gt;&gt; ~/.bashrc
+<span class="anchor" id="line-3-2"></span># For a source installation
+<span class="anchor" id="line-4-2"></span>&gt; echo "source ~/turtlebot/devel/setup.bash" &gt;&gt; ~/.bashrc</pre><span class="anchor" id="line-63"></span><p class="line874">If you have overlaid your own development environment on top of the installed debs, point to that setup script instead. <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span></p><p class="line867">
+</p><h2 id="What_Next.3F">What Next?</h2>
+<span class="anchor" id="line-66"></span><ul><li><p class="line891"><a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/PC%20Installation">PC Installation</a> or return to <a class="nonexistent" href="http://wiki.ros.org/Robots/TurtleBot%3Fdistro%3Dindigo">TurtleBot main page</a>. <span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span></p></li></ul><p class="line867"><span class="anchor" id="line-69"></span></p><p class="line867"><span class="anchor" id="line-70"></span></p><p class="line867"><span class="anchor" id="line-71"></span><span class="anchor" id="bottom"></span></p></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" lang="en" dir="ltr">Wiki: turtlebot/Tutorials/indigo/Turtlebot Installation  (last edited 2016-08-18 23:36:37 by <span title="KevinWells @ 192.55.48.100[192.55.48.100]"><a class="nonexistent" href="http://wiki.ros.org/KevinWells" title="KevinWells @ 192.55.48.100[192.55.48.100]">KevinWells</a></span>)</p>
+
+
+
+
+<div style="margin-top: 9px;" class="footer">
+Except where otherwise noted, the ROS wiki is licensed under the <br><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> | <a href="https://plus.google.com/113789706402978299308" rel="publisher">Find us on Google+</a>
+<hr style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+<a href="http://www.osrfoundation.org/"><img style="margin-top: -1px;" src="./turtlebot_Tutorials_indigo_Turtlebot Installation - ROS Wiki_files/brought_by_horiz.png"><p></p></a>
+  </div>
+</div>
+</div>
+
+  </div> <!-- /#dpage-inner, /#dpage -->
+
+
+
+
+
+</body></html>

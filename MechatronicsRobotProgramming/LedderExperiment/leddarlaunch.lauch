@@ -1,0 +1,3 @@
+<launch>
+<node pkg="tf" type="static_transform_publisher" name="leddar_frame" args="0 0 0 0 0 0 /world /ldr10"/>
+</launch>
